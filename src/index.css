@@ -1,8 +1,17 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: PPN-Med ;
+  src: url(./assets/fonts/PPNeueMontreal-Medium.431960c2.woff2);
+}
+@font-face {
+  font-family: PPN-Reg;
+  src: url(./assets/fonts/PPNeueMontreal-Regular.48a63c42.woff2);
+}
+
 :root {
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #FD2B2A;
 
 }
