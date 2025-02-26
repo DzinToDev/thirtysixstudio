@@ -8,10 +8,11 @@
   font-family: PPN-Reg;
   src: url(./assets/fonts/PPNeueMontreal-Regular.48a63c42.woff2);
 }
-
-:root {
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #FD2B2A;
-
+body {
+  background-color: #fd2c2a;
 }
+
+canvas {
+  pointer-events: none;
+}
+
