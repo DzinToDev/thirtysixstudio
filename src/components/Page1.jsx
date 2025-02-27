@@ -16,7 +16,7 @@ const Page1 = ({headingref}) => {
     })
   })
   return (
-    <div className="w-full min-h-screen border-b-[0.1px]  relative ">
+    <div className="w-full min-h-screen border-b-[0.1px] pb-16 relative ">
     <nav className="w-full sm:py-3 sm:px-4 fixed top-0 left-0 z-50 flex justify-between font-['PPN-Reg'] border-b-[0.001px]">
       <h1 className="text-base">Thirtysixstudio</h1>
       <div className="links sm:flex gap-10 items-center ">
@@ -53,8 +53,8 @@ const Page1 = ({headingref}) => {
       </div>
       </div>
     </div>
-    <div className="brand-heading px-4 mt-18 " ref={headingref}>
-      <h1 className="text-[15.7vw] font-['PPN-Reg']">Thirtysixstudio</h1>
+    <div className="brand-heading px-4 mt-33 cursor-pointer" ref={headingref}>
+      <h1 className="text-[15.7vw] font-['PPN-Reg'] leading-none">Thirtysixstudio</h1>
     </div>
   </div>
   )
