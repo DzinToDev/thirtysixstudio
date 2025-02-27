@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import Canvas from "./components/Canvas";
-import data from "./data";
+import floatingPosition from "./components/data/floatingPosition";
 import LocomotiveScroll from "locomotive-scroll";
 import { TfiLayoutMenuSeparated } from "react-icons/tfi";
 import Page1 from "./components/Page1";
@@ -8,6 +8,10 @@ import Page2 from "./components/Page2";
 import Page3 from "./components/Page3";
 import { Circ, gsap } from "gsap/all";
 import { useGSAP } from "@gsap/react";
+import Page4 from "./components/Page4";
+import Page5 from "./components/Page5";
+import Page6 from "./components/Page6";
+import Page7 from "./components/Page7";
 
 const App = () => {
   const [showCanvas, setShowCanvas] = useState(false);
@@ -82,19 +86,47 @@ const App = () => {
       ></span>
       <div className="w-full min-h-screen relative text-black ">
         {showCanvas &&
-          data[0].map((canvasdets, index) => (
+          floatingPosition[0].map((canvasdets, index) => (
             <Canvas key={index} details={canvasdets} />
           ))}
 
         <Page1 headingref={headingref} />
         {showCanvas &&
-        data[1].map((canvasdets, index) => (
+        floatingPosition[1].map((canvasdets, index) => (
           <Canvas key={index} details={canvasdets} />
         ))}
 
         <Page2 />
-       
+        {showCanvas &&
+        floatingPosition[2].map((canvasdets, index) => (
+          <Canvas key={index} details={canvasdets} />
+        ))}
+
         <Page3 />
+        {showCanvas &&
+        floatingPosition[3].map((canvasdets, index) => (
+          <Canvas key={index} details={canvasdets} />
+        ))}
+
+        <Page4 />
+        {showCanvas &&
+        floatingPosition[4].map((canvasdets, index) => (
+          <Canvas key={index} details={canvasdets} />
+        ))}
+
+        <Page5 />
+        {showCanvas &&
+        floatingPosition[5].map((canvasdets, index) => (
+          <Canvas key={index} details={canvasdets} />
+        ))}
+
+        <Page6 />
+        {showCanvas &&
+        floatingPosition[6].map((canvasdets, index) => (
+          <Canvas key={index} details={canvasdets} />
+        ))}
+
+        <Page7 />
       </div>
     </>
   );

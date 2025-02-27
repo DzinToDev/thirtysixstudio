@@ -37,7 +37,7 @@ const Page1 = ({headingref}) => {
           );
         })}
         <div>
-          <TfiLayoutMenuSeparated className="text-2xl ml-14" />
+          <TfiLayoutMenuSeparated className="text-2xl ml-20" />
         </div>
       </div>
     </nav>

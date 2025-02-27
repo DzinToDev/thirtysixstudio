@@ -15,4 +15,7 @@ body {
 canvas {
   pointer-events: none;
 }
+span {
+  display: inline-block;
+}
 
