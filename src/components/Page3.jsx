@@ -34,7 +34,7 @@ const Page3 = () => {
           );
         })}
       </div>
-      <div className="constact h-[45vw] w-[59vw] flex justify-center py-10 ml-26 ">
+      <div className="constact h-[45vw] w-[59vw] flex justify-center py-10 ml-29 ">
         <div className="left-text sm:w-[41%] flex flex-col gap-8 ">
           <p className="text-sm mt-40">
             Got a project in mind? Drop us a line at hello@thirtysixstudio.com

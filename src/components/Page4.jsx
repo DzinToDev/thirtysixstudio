@@ -50,16 +50,17 @@ const Page4 = () => {
 
   return (
     <div className="w-full min-h-screen flex flex-col justify-center">
-      <div className="w-full h-fit border-b-[0.1px] mt-12 pb-32 flex items-start justify-center">
-        <div className="w-[60vw] flex justify-between py-10 pl-10  ">
-          <h1 className="text-lg font-['PPN-Med']">02 - WHO WE ARE</h1>
-          <h1 className="text-[2.3vw] w-[41%] leading-none font-['PPN-Reg'] ">
+      <div className="w-full h-fit border-b-[0.1px] mt-12 pb-32 flex justify-evenly">
+        <div className="w-[67%] flex justify-between py-10     ">
+
+          <h1 className="text-lg font-['PPN-Med'] ml-32">02 - WHO WE ARE</h1>
+          <h1 className="text-[2.3vw] w-[36%] leading-none font-['PPN-Reg'] ml-10 ">
             Our vision is to refine digital production while creating social
             impact and opportunity.
           </h1>
         </div>
       </div>
-      <div className="text-anime-container p-2 mt-6">
+      <div className="text-anime-container p-2 mt-6 bg-amber-600">
         {whoWeAreData.map((item, index) => {
           return (
             <div
@@ -78,7 +79,7 @@ const Page4 = () => {
                   ))}
                 </h1>
               </div>
-              <p className="text-sm w-[28%] ml-22">{item.description}</p>
+              <p className="text-sm w-[28%] ml-34">{item.description}</p>
             </div>
           );
         })}
