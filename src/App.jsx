@@ -12,6 +12,7 @@ import Page4 from "./components/Page4";
 import Page5 from "./components/Page5";
 import Page6 from "./components/Page6";
 import Page7 from "./components/Page7";
+import Roles from "./components/Roles";
 
 const App = () => {
   const [showCanvas, setShowCanvas] = useState(false);
@@ -127,6 +128,12 @@ const App = () => {
         ))}
 
         <Page7 />
+        {showCanvas &&
+        floatingPosition[7].map((canvasdets, index) => (
+          <Canvas key={index} details={canvasdets} />
+        ))}
+        
+        <Roles />
       </div>
     </>
   );
