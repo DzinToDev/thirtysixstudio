@@ -1,5 +1,8 @@
 import React from "react";
 import { FaPlus } from "react-icons/fa6";
+import { motion } from "motion/react";
+import { Expo, Power4 } from "gsap";
+import { stagger } from "motion";
 
 const Page3 = () => {
   return (
@@ -7,12 +10,36 @@ const Page3 = () => {
       <div className="w-full h-[59vh] flex items-center justify-center pl-20 py-12 border-b-[0.1px] ">
         <div className="p3-text w-[60vw] h-full pt-14 pl-10">
           <h1 className='text-sm font-["PPN-Med"]'>OUR SERVICES</h1>
-          <p className="text-[2.3vw] mt-14 leading-10">
-            We provide you with captivating design, interactive animations,
-            reliable code, and immaculate project coordination. Whether you need
-            a campaign built from scratch or assistance at a specific phase,
-            we’ve got you covered.
-          </p>
+          <div className="py-4 w-full overflow-hidden leading-none">
+            {[
+              " We provide you with captivating design, interactive ",
+              "animations,reliable code, and immaculate project ",
+              "coordination. Whether you need a campaign built from ",
+              " scratch or assistance at a specific phase, we’ve got you ",
+              "covered.",
+            ].map((elem, index) => {
+              return (
+                <p
+                  key={index}
+                  className="text-[2.3vw] mt-2 origin-left overflow-hidden "
+                >
+                  <motion.span
+                    initial={{ rotate: 12, y: "90%" }}
+                    whileInView={{ rotate: 0, y: 0 }}
+                    viewport={{ once: false }}
+                    transition={{
+                      ease: [0.22, 1, 0.36, 1],
+                      duration: 1.5,
+                      delay: index * 0.2,
+                    }}
+                    className="origin-left inline-block"
+                  >
+                    {elem}
+                  </motion.span>
+                </p>
+              );
+            })}
+          </div>
         </div>
       </div>
       <div className="services w-full  uppercase flex flex-col items-center justify-center  py-22 px-2 border-b-[0.1px]">
@@ -31,7 +58,9 @@ const Page3 = () => {
             <div className="relative h-40 transform -translate-y-20 transition-transform duration-500 ease-in-out group-hover:translate-y-0">
               {/* First Row */}
               <div className=" bg-black p-[1.77rem] flex items-center justify-center  pl-24 ">
-                <h1 className=" w-[58%] bg-gradient-to-r from-[#fd2c2a] to-[#f5940c] bg-clip-text text-transparent">{item}</h1>
+                <h1 className=" w-[58%] bg-gradient-to-r from-[#fd2c2a] to-[#f5940c] bg-clip-text text-transparent">
+                  {item}
+                </h1>
                 {/* <h1 className="text-lg">{award.type}</h1> */}
                 {/* <h1>+</h1> */}
               </div>
@@ -46,7 +75,12 @@ const Page3 = () => {
         ))}
       </div>
       <div className="constact h-[45vw] w-[59vw] flex justify-center py-10 ml-29 ">
-        <div className="left-text sm:w-[41%] flex flex-col items-start gap-8 ">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ ease: "easeInOut", duration: 0.5, delay: 0.9 }}
+          className="left-text sm:w-[41%] flex flex-col items-start gap-8 "
+        >
           <p className="text-sm mt-40">
             Got a project in mind? Drop us a line at hello@thirtysixstudio.com
             or use the form below.
@@ -66,7 +100,7 @@ const Page3 = () => {
             {/* Expanding Circle Animation */}
             <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-0 h-0 bg-black rounded-full transition-all duration-500 ease-in-out group-hover:w-64 group-hover:h-64"></div>
           </button>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

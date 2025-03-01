@@ -1,5 +1,7 @@
 import { ScrollTrigger, gsap } from "gsap/all";
 import React, { useEffect, useRef } from "react";
+import { motion } from "motion/react";
+import { Expo, Power4 } from "gsap";
 
 const Page4 = () => {
   const textRefs = useRef([]);
@@ -29,12 +31,12 @@ const Page4 = () => {
 
         gsap.fromTo(
           letters,
-          { x: "-10%", opacity: 0,  },
+          { x: "-10%", opacity: 0 },
           {
             x: "0%",
             opacity: 1,
             duration: 1.5,
-            
+
             ease: "power2.out",
             scrollTrigger: {
               trigger: el,
@@ -52,12 +54,20 @@ const Page4 = () => {
     <div className="w-full min-h-screen flex flex-col justify-center">
       <div className="w-full h-fit border-b-[0.1px] mt-12 pb-32 flex justify-evenly">
         <div className="w-[67%] flex justify-between py-10     ">
-
           <h1 className="text-lg font-['PPN-Med'] ml-32">02 - WHO WE ARE</h1>
-          <h1 className="text-[2.3vw] w-[36%] leading-none font-['PPN-Reg'] ml-10 ">
+          <motion.h1
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{
+              ease: "linear",
+              duration: 0.7,
+              delay: 0.2,
+            }}
+            className="text-[2.3vw] w-[36%] leading-none font-['PPN-Reg'] ml-10 "
+          >
             Our vision is to refine digital production while creating social
             impact and opportunity.
-          </h1>
+          </motion.h1>
         </div>
       </div>
       <div className="text-anime-container p-2 mt-6">
@@ -79,7 +89,18 @@ const Page4 = () => {
                   ))}
                 </h1>
               </div>
-              <p className="text-sm w-[28%] ml-34">{item.description}</p>
+              <motion.p
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{
+                  ease: "linear",
+                  duration: 0.7,
+                  delay: 0.2,
+                }}
+                className="text-sm w-[28%] ml-34"
+              >
+                {item.description}
+              </motion.p>
             </div>
           );
         })}

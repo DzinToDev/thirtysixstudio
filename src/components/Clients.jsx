@@ -1,5 +1,6 @@
 import React from "react";
 import AnimatedButton from "./AnimatedButton";
+import { motion } from "motion/react";
 
 const Clients = () => {
   return (
@@ -8,14 +9,32 @@ const Clients = () => {
         <div className=" w-[53vw] h-full flex justify-between items-center relative py-12 ">
           <div className="left-text w-[46%] flex flex-col gap-8 ">
             <h1 className="text-base">CLIENTS</h1>
-            <h1 className="text-[2.3vw] leading-none ">
+            <motion.h1
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{
+                ease: "linear",
+                duration: 1,
+                delay: 0.4,
+              }}
+              className="text-[2.3vw] leading-none "
+            >
               Ready to get your project off the ground?
-            </h1>
-            <p className="text-sm">
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{
+                ease: "linear",
+                duration: 1,
+                delay: 0.4,
+              }}
+              className="text-sm"
+            >
               We’re currently accepting new clients and are excited to hear from
               you. Get in touch by sending an email to hello@thirtysixstudio.com
               or fill out the form below to start your journey with us.
-            </p>
+            </motion.p>
           </div>
         </div>
       </div>
@@ -39,7 +58,7 @@ const Clients = () => {
             placeholder="Message"
             className="border-[1px] rounded-4xl w-full h-40 px-6 py-4 text-base mb-12 appearance-none  focus:outline-none"
           />
-           <button className="relative px-4 py-1 border-[0.1px] rounded-full overflow-hidden transition-all duration-500 ease-in-out group">
+          <button className="relative px-4 py-1 border-[0.1px] rounded-full overflow-hidden transition-all duration-500 ease-in-out group">
             {/* Text with Background Gradient on Hover */}
             <span className="relative z-10 text-black text-xs font-['PPN-Med'] transition-all duration-500 group-hover:bg-clip-text group-hover:text-transparent group-hover:bg-gradient-to-r from-[#fd2c2a] to-[#f5940c] uppercase">
               Send
