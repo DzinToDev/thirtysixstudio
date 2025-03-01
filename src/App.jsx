@@ -19,6 +19,7 @@ const App = () => {
   const [showCanvas, setShowCanvas] = useState(false);
   const headingref = useRef(null);
   const growingSpan = useRef(null);
+  const awardText = useRef(null);
 
   useEffect(() => {
     const locomotiveScroll = new LocomotiveScroll();
@@ -32,7 +33,7 @@ const App = () => {
           gsap.set(growingSpan.current, {
             top: e.clientY,
             left: e.clientX,
-            scale: 0, 
+            scale: 0,
           });
           gsap.to("body", {
             color: "#000",
@@ -41,22 +42,30 @@ const App = () => {
             duration: 1.2,
             ease: "power2.inOut",
           });
+          gsap.to("nav", {
+            color: "#000",
+            backgroundColor: "#f5940c",
+            duration: 1.2,
+            ease: "linear ",
+            delay: 0.3,
+          });
           gsap.to(growingSpan.current, {
             scale: 1000,
             duration: 2,
             ease: Circ.easeInOut,
             overwrite: true,
           });
+          gsap.to(awardText.current, {
+            color: "#f5940c !important",
+          });
         } else {
           gsap.to(growingSpan.current, {
             scale: 0,
             duration: 1,
-            top: e.clientY,  // Move back to where the click happened
+            top: e.clientY, // Move back to where the click happened
             left: e.clientX, // Move back to where the click happened
             ease: "circ.inOut",
             overwrite: true,
-           
-            
           });
           gsap.to("body", {
             color: "#000",
@@ -65,20 +74,29 @@ const App = () => {
             ease: "power2.inOut",
             delay: 0.3,
           });
+          gsap.to("nav", {
+            color: "#000",
+            backgroundColor: "#fd2c2a",
+            duration: 1,
+            ease: "power2.inOut",
+            delay: 0.4,
+          });
+          gsap.to(awardText.current, {
+            color: "#fd2c2a !important",
+          });
         }
         return !prevShowCanvas;
       });
     };
-  
+
     const headingElement = headingref.current;
     headingElement.addEventListener("click", handleClick);
-  
+
     // Cleanup function to remove event listener
     return () => {
       headingElement.removeEventListener("click", handleClick);
     };
   }, []);
-  
 
   return (
     <>
@@ -94,57 +112,57 @@ const App = () => {
 
         <Page1 headingref={headingref} />
         {showCanvas &&
-        floatingPosition[1].map((canvasdets, index) => (
-          <Canvas key={index} details={canvasdets} />
-        ))}
+          floatingPosition[1].map((canvasdets, index) => (
+            <Canvas key={index} details={canvasdets} />
+          ))}
 
         <Page2 />
         {showCanvas &&
-        floatingPosition[2].map((canvasdets, index) => (
-          <Canvas key={index} details={canvasdets} />
-        ))}
+          floatingPosition[2].map((canvasdets, index) => (
+            <Canvas key={index} details={canvasdets} />
+          ))}
 
         <Page3 />
         {showCanvas &&
-        floatingPosition[3].map((canvasdets, index) => (
-          <Canvas key={index} details={canvasdets} />
-        ))}
+          floatingPosition[3].map((canvasdets, index) => (
+            <Canvas key={index} details={canvasdets} />
+          ))}
 
         <Page4 />
         {showCanvas &&
-        floatingPosition[4].map((canvasdets, index) => (
-          <Canvas key={index} details={canvasdets} />
-        ))}
+          floatingPosition[4].map((canvasdets, index) => (
+            <Canvas key={index} details={canvasdets} />
+          ))}
 
         <Page5 />
         {showCanvas &&
-        floatingPosition[5].map((canvasdets, index) => (
-          <Canvas key={index} details={canvasdets} />
-        ))}
+          floatingPosition[5].map((canvasdets, index) => (
+            <Canvas key={index} details={canvasdets} />
+          ))}
 
         <Page6 />
         {showCanvas &&
-        floatingPosition[6].map((canvasdets, index) => (
-          <Canvas key={index} details={canvasdets} />
-        ))}
+          floatingPosition[6].map((canvasdets, index) => (
+            <Canvas key={index} details={canvasdets} />
+          ))}
 
         <Page7 />
         {showCanvas &&
-        floatingPosition[7].map((canvasdets, index) => (
-          <Canvas key={index} details={canvasdets} />
-        ))}
-        
-        <Roles />
+          floatingPosition[7].map((canvasdets, index) => (
+            <Canvas key={index} details={canvasdets} />
+          ))}
+
+        <Roles awardText={awardText} />
         {showCanvas &&
-        floatingPosition[8].map((canvasdets, index) => (
-          <Canvas key={index} details={canvasdets} />
-        ))}
+          floatingPosition[8].map((canvasdets, index) => (
+            <Canvas key={index} details={canvasdets} />
+          ))}
 
         <Clients />
         {showCanvas &&
-        floatingPosition[9].map((canvasdets, index) => (
-          <Canvas key={index} details={canvasdets} />
-        ))}
+          floatingPosition[9].map((canvasdets, index) => (
+            <Canvas key={index} details={canvasdets} />
+          ))}
       </div>
     </>
   );
