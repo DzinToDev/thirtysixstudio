@@ -60,7 +60,7 @@ const Page4 = () => {
           </h1>
         </div>
       </div>
-      <div className="text-anime-container p-2 mt-6 bg-amber-600">
+      <div className="text-anime-container p-2 mt-6">
         {whoWeAreData.map((item, index) => {
           return (
             <div
