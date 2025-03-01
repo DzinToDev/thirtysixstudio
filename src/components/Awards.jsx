@@ -28,8 +28,8 @@ const Awards = ({awardText}) => {
           >
             <div className="relative h-40 transform -translate-y-20 transition-transform duration-500 ease-in-out group-hover:translate-y-0">
               {/* First Row */}
-              <div  className=" text-[#f5940c] bg-black p-[1.77rem] flex items-center justify-center pl-12">
-                <h1 ref={awardText} className=" w-2/3">{award.name}</h1>
+              <div  className="bg-black p-[1.77rem] flex items-center justify-center pl-12">
+                <h1 ref={awardText} className=" w-2/3  bg-gradient-to-r from-[#fd2c2a] to-[#f5940c] bg-clip-text text-transparent">{award.name}</h1>
                 {/* <h1 className="text-lg">{award.type}</h1> */}
               </div>
               {/* Second Row */}

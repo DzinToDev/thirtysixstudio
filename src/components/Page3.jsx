@@ -30,24 +30,23 @@ const Page3 = () => {
           >
             <div className="relative h-40 transform -translate-y-20 transition-transform duration-500 ease-in-out group-hover:translate-y-0">
               {/* First Row */}
-              <div  className=" text-[#fd2c2a] bg-black p-[1.77rem] flex items-center justify-center  pl-24">
-                <h1  className=" w-[58%]">{item}</h1>
+              <div className=" bg-black p-[1.77rem] flex items-center justify-center  pl-24 ">
+                <h1 className=" w-[58%] bg-gradient-to-r from-[#fd2c2a] to-[#f5940c] bg-clip-text text-transparent">{item}</h1>
                 {/* <h1 className="text-lg">{award.type}</h1> */}
-                <h1>+</h1>
+                {/* <h1>+</h1> */}
               </div>
               {/* Second Row */}
               <div className=" bg-transparent text-black p-[1.67rem] flex items-center justify-center pl-24">
                 <h1 className="w-[58%]">{item}</h1>
                 {/* <h1 className="text-lg">{award.label}</h1> */}
                 <h1>+</h1>
-
               </div>
             </div>
           </div>
         ))}
       </div>
       <div className="constact h-[45vw] w-[59vw] flex justify-center py-10 ml-29 ">
-        <div className="left-text sm:w-[41%] flex flex-col gap-8 ">
+        <div className="left-text sm:w-[41%] flex flex-col items-start gap-8 ">
           <p className="text-sm mt-40">
             Got a project in mind? Drop us a line at hello@thirtysixstudio.com
             or use the form below.
@@ -58,7 +57,15 @@ const Page3 = () => {
             through one of our tailored labs, where we champion future-forward
             thinking within an ethical framework.
           </p>
-          <span className="uppercase text-sm border-[0.2px] w-fit px-3 py-1 rounded-full  ">talk to us</span>
+          <button className="relative px-4 py-1 border-[0.1px] rounded-full overflow-hidden transition-all duration-500 ease-in-out group">
+            {/* Text with Background Gradient on Hover */}
+            <span className="relative z-10 text-black text-xs font-['PPN-Med'] transition-all duration-500 group-hover:bg-clip-text group-hover:text-transparent group-hover:bg-gradient-to-r from-[#fd2c2a] to-[#f5940c] uppercase">
+              Talk to us
+            </span>
+
+            {/* Expanding Circle Animation */}
+            <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-0 h-0 bg-black rounded-full transition-all duration-500 ease-in-out group-hover:w-64 group-hover:h-64"></div>
+          </button>
         </div>
       </div>
     </div>
