@@ -30,14 +30,14 @@ const Page3 = () => {
           >
             <div className="relative h-40 transform -translate-y-20 transition-transform duration-500 ease-in-out group-hover:translate-y-0">
               {/* First Row */}
-              <div  className=" text-[#fd2c2a] bg-black p-[1.77rem] flex items-center justify-center pl-36">
-                <h1  className=" w-2/3">{item}</h1>
+              <div  className=" text-[#fd2c2a] bg-black p-[1.77rem] flex items-center justify-center  pl-24">
+                <h1  className=" w-[58%]">{item}</h1>
                 {/* <h1 className="text-lg">{award.type}</h1> */}
                 <h1>+</h1>
               </div>
               {/* Second Row */}
-              <div className=" bg-transparent text-black p-[1.67rem] flex items-center justify-center pl-36">
-                <h1 className="w-2/3">{item}</h1>
+              <div className=" bg-transparent text-black p-[1.67rem] flex items-center justify-center pl-24">
+                <h1 className="w-[58%]">{item}</h1>
                 {/* <h1 className="text-lg">{award.label}</h1> */}
                 <h1>+</h1>
 
