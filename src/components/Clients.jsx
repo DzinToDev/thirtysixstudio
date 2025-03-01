@@ -20,10 +20,10 @@ const Clients = () => {
       </div>
       <div className="div-form w-full h-screen  flex flex-col items-center justify-center py-20 pl-18">
         <form action="" className=" sm:w-[53vw] flex flex-col items-start text-black" >
-            <input type="text" placeholder="Name*"  className="border-[0.1px] rounded-4xl w-full px-8 py-4 text-2xl my-12 appearance-none  focus:outline-none  placeholder-gray-900" />
-            <input type="text" placeholder="Email*" className="border-[0.1px] rounded-4xl w-full px-8 py-4 text-2xl mb-34 appearance-none  focus:outline-none placeholder-gray-900"/>
+            <input type="text" placeholder="Name*"  className="border-[1px] rounded-4xl w-full px-8 py-4 text-2xl my-12 appearance-none  focus:outline-none  placeholder-gray-900" />
+            <input type="text" placeholder="Email*" className="border-[1px] rounded-4xl w-full px-8 py-4 text-2xl mb-34 appearance-none  focus:outline-none placeholder-gray-900"/>
             
-            <textarea placeholder="Message" className="border-[0.1px] rounded-4xl w-full h-40 px-6 py-4 text-base mb-12 appearance-none  focus:outline-none" />
+            <textarea placeholder="Message" className="border-[1px] rounded-4xl w-full h-40 px-6 py-4 text-base mb-12 appearance-none  focus:outline-none" />
             <span className="uppercase text-xs border-[0.2px] w-fit px-6 py-2 rounded-full  ">Send</span>
 
   

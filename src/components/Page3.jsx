@@ -15,7 +15,7 @@ const Page3 = () => {
           </p>
         </div>
       </div>
-      <div className="services uppercase flex flex-col items-center justify-center  py-22 px-2 border-b-[0.1px]">
+      <div className="services w-full  uppercase flex flex-col items-center justify-center  py-22 px-2 border-b-[0.1px]">
         {[
           "creative",
           "design",
@@ -23,16 +23,28 @@ const Page3 = () => {
           "technology",
           "project delivery",
           "example product",
-        ].map((item, index) => {
-          return (
-            <div key={index} className="service w-full h-18  flex  items-center justify-center border-b-[1px]">
-              <div className="w-[49vw] flex items-center justify-between origin-left pr-46">
-                <h3 className="text-sm">{item}</h3>
-                <FaPlus />
+        ].map((item, index) => (
+          <div
+            key={index}
+            className="h-17 w-full overflow-hidden cursor-pointer group"
+          >
+            <div className="relative h-40 transform -translate-y-20 transition-transform duration-500 ease-in-out group-hover:translate-y-0">
+              {/* First Row */}
+              <div  className=" text-[#fd2c2a] bg-black p-[1.77rem] flex items-center justify-center pl-36">
+                <h1  className=" w-2/3">{item}</h1>
+                {/* <h1 className="text-lg">{award.type}</h1> */}
+                <h1>+</h1>
+              </div>
+              {/* Second Row */}
+              <div className=" bg-transparent text-black p-[1.67rem] flex items-center justify-center pl-36">
+                <h1 className="w-2/3">{item}</h1>
+                {/* <h1 className="text-lg">{award.label}</h1> */}
+                <h1>+</h1>
+
               </div>
             </div>
-          );
-        })}
+          </div>
+        ))}
       </div>
       <div className="constact h-[45vw] w-[59vw] flex justify-center py-10 ml-29 ">
         <div className="left-text sm:w-[41%] flex flex-col gap-8 ">

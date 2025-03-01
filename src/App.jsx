@@ -104,7 +104,7 @@ const App = () => {
         ref={growingSpan}
         className="growing fixed -top-10 -left-10 w-3 h-3 block bg-[#f5940c]  rounded-full"
       ></span>
-      <div className="w-full min-h-screen relative text-black ">
+      <div className="w-full min-h-screen relative text-black overflow-x-hidden">
         {showCanvas &&
           floatingPosition[0].map((canvasdets, index) => (
             <Canvas key={index} details={canvasdets} />
