@@ -63,14 +63,18 @@ const Page1 = ({ headingref }) => {
             </p>
             <span>Scroll</span>
           </motion.div>
-          <div className="h-full w-1/2  flex  justify-end ">
+          <motion.div 
+           initial={{ opacity: 0 }}
+           whileInView={{ opacity: 1 }}
+           transition={{ ease: Power4.easeInOut, duration: 0.7, delay: 0.3 }}
+          className="h-full w-1/2  flex  justify-end ">
             <img
               ref={circleImgRef}
               className="w-2/3"
               src="/img/circleText.png"
               alt=""
             />
-          </div>
+          </motion.div>
         </div>
       </div>
       <div
