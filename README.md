@@ -1,8 +1,47 @@
-# React + Vite
+# ThirtySix Studio Clone 🚀
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+😳 **AI Used for This Floating Canvas Effect!**  
+I just completed cloning ThirtySix Studio using **React, GSAP, Framer Motion, Tailwind** – and AI made it crazy fast & easier! 😍🔥
 
-Currently, two official plugins are available:
+This website is really 🌶️ 🥵 AI can do it even faster, but no worries 😎🥤 – I took my time to match animations & hover effects and completed all the pages myself.  
+This is one of the most fun projects I’ve built! **I NEED MORE projects like this!** 🤩
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🔗 Live Demo
+
+👉 [Live Demo](https://thirtysixstudio-woad.vercel.app/)
+
+## 🎥 Special Thanks
+
+Massive thanks to **Sheryians Coding School** for teaching these incredible floating effects!  
+Here’s their YouTube tutorial link 🎥: [ https://youtu.be/5WDNHl-x-AM?si=j26syEnrRrq_Xdpi ]
+
+---
+
+## 📸 Screenshots
+
+### 🏠 Homepage
+
+![Homepage](./src/screenshots/home1.png)
+
+### 🎨 Canvas Effect
+
+![Canvas Effect](./src/screenshots/home2.png)
+
+### 🔥 Animations
+
+![Animations](./src/screenshots/textAnime.png)
+![Animations](./src/screenshots/Hover.png)
+
+### ✅ Final Look
+
+![Footer Look](./src/screenshots/footer.png)
+
+---
+
+## 🛠️ Tech Stack
+
+- **React** ⚛️
+- **GSAP** ✨
+- **Framer Motion** 🎭
+- **Tailwind CSS** 🎨
+- **AI Assisted Effects** 🤖
